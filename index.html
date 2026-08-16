@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AR 室内定位 Web Demo</title>
+    <script type="module" crossorigin src="./assets/index-BW8ra9Eb.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BLVF_wR3.css">
+  <link rel="manifest" href="./manifest.webmanifest"></head>
+  <body>
+    <div id="app">
+      <h1>AR 室内定位 Demo</h1>
+      <p style="text-align:center"><a href="./realtime.html" style="color:#7dd3fc">实时二维码立方体测试（无需进入 AR）</a></p>
+
+      <section id="scan-section">
+        <video id="scan-video" playsinline muted></video>
+        <canvas id="scan-canvas" hidden></canvas>
+        <div class="controls">
+          <button id="scan-btn" type="button">开始扫码</button>
+          <button id="enter-ar-btn" type="button" hidden>进入 AR</button>
+          <p id="scan-status">请对准二维码</p>
+        </div>
+      </section>
+
+      <section id="ar-section" hidden>
+        <canvas id="ar-canvas"></canvas>
+        <button id="ar-toggle-btn" type="button">⚙ 控制</button>
+        <div class="controls" id="ar-controls" hidden>
+          <button id="place-btn" type="button">放置到准星</button>
+          <label>
+            模型透明度
+            <input id="opacity-slider" type="range" min="0.1" max="1" step="0.05" value="0.8" />
+          </label>
+          <div class="nudge-controls">
+            <button type="button" data-nudge="0,0,-0.1">前</button>
+            <button type="button" data-nudge="0,0,0.1">后</button>
+            <button type="button" data-nudge="-0.1,0,0">左</button>
+            <button type="button" data-nudge="0.1,0,0">右</button>
+            <button type="button" data-nudge="0,0.1,0">上</button>
+            <button type="button" data-nudge="0,-0.1,0">下</button>
+            <button type="button" data-rotate="-0.1">左转</button>
+            <button type="button" data-rotate="0.1">右转</button>
+          </div>
+          <button id="pdr-btn" type="button">启用 PDR 估算</button>
+          <button id="save-binding-btn" type="button">保存空白码绑定</button>
+          <button id="exit-ar-btn" type="button">退出 AR</button>
+          <p id="ar-status"></p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

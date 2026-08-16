@@ -1,0 +1,11 @@
+{
+  "name": "AR 室内定位 Demo",
+  "short_name": "AR Demo",
+  "description": "二维码初始定位 + WebXR/ARCore 持续追踪的室内 AR 原型",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "lang": "en",
+  "scope": "./"
+}

@@ -1,0 +1,12 @@
+{
+  "site": "demo",
+  "models": [
+    {
+      "id": "demo-room",
+      "path": "models/demo-room.glb",
+      "scale": 1,
+      "offset": { "x": 0, "y": 0, "z": 0 },
+      "rotationDeg": { "x": 0, "y": 0, "z": 0 }
+    }
+  ]
+}
